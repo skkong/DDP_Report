@@ -1,8 +1,8 @@
 name: DdpApp
 account: skkong
 server: shinyapps.io
-bundleId: 310374
+bundleId: 310795
 url: https://skkong.shinyapps.io/DdpApp
-when: 1447464614.77047
+when: 1447548642.74677
 asMultiple: FALSE
 asStatic: FALSE

@@ -21,6 +21,8 @@ shinyUI(pageWithSidebar(
     h4("Result: "),
     verbatimTextOutput('id_out_child_height'), 
     
+    includeHTML('documentation.html'),
     plotOutput("id_plot")
+    
   )
 ))

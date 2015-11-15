@@ -4,6 +4,9 @@ library(UsingR)
 shinyServer(
   function(input, output) {
     
+    # fitting linear model to galton data set
+    modFit <- lm(child ~ parent, data=galton)
+      
     # print the parent's height
     output$id_out_parent_height <- renderPrint({
       print(input$id_parent_height)
@@ -14,10 +17,6 @@ shinyServer(
       # get parent height
       parent_height <- input$id_parent_height
       
-      #cat(parent_height)
-      # fitting linear model to galton data set
-      modFit <- lm(child ~ parent, data=galton)
-      
       # predicting the child's height from the parent height
       child_height <- predict(modFit, newdata=data.frame(parent = parent_height), interval="prediction")
       
@@ -27,7 +26,8 @@ shinyServer(
     
     output$id_plot <- renderPlot({
       parent_height <- input$id_parent_height
-      
+     
+      # show graph 
       plot(jitter(child) ~ parent, data=galton, xlab="Parent's height", ylab="Child's height")
       lines(galton$parent, modFit$fitted.values)
       lines(c(parent_height, parent_height), c(0, 200), col="red", lwd="5")
