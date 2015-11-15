@@ -8,6 +8,6 @@ App consists of two files.
 - server.R: it makes some predictions
 - ui.R: it shows some input box and results in panel.
 
-[Shiny app](https://skkong.shinyapps.io/DdpApp)
+[My Shiny app](https://skkong.shinyapps.io/DdpApp)
 
-[Shiny R present file](http://rpubs.com/skkong/ddp_report)
+[My Shiny R present file](http://rpubs.com/skkong/ddp_report)
