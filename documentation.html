@@ -1,0 +1,18 @@
+Hi, everyone<br>
+This is a <b>document about how to predict</b> the children's height from their parents. <br>
+
+<p><i>Francis Galton, the 19th century polymath, can be credited with discovering regression. He was particularly interested in the idea that the children of tall parents tended to be tall also, but a little shorter than their parents.</i> [reference:  Regression Models for Data Science in R] <br>
+</p>
+
+<p>We will assume a systematic component via a line and then independent and identically distributed Gaussian errors.</p>
+
+<p>In R, we can use as following:</p>
+
+<pre>
+   modFit <- lm(child ~ parent, data = galton) <br>
+   child_height <- predict(modFit, newdata=data.frame(parent = parent_height), interval="prediction")
+</pre>
+       
+<p>You can predict the height of childrent. If you enter parent height in left input panel, then the height of childrent is displayed in right output panel. But You know, this is a kind of statistical inferrence method.</p>
+
+<p>If you need more details, then click <a href="http://rpubs.com/skkong/ddp_report">here</a></p>
